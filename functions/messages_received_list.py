@@ -12,7 +12,7 @@ from decimal import Decimal
 
 
 def handler(event, context):
-    dynamodb = boto3.resource("dynamodb", region_name="eu-west-1")
+    dynamodb = boto3.resource("dynamodb")
     table = dynamodb.Table("Messages")
 
     # Get most recent messages received
